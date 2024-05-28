@@ -12,9 +12,9 @@
   "author": "810839700@qq.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/huyanhai/sentry-vite-plugin/issues"
+    "url": "https://github.com/huyanhai/vite-plugin-lygia/issues"
   },
-  "homepage": "https://github.com/huyanhai/sentry-vite-plugin#readme",
+  "homepage": "https://github.com/huyanhai/vite-plugin-lygia#readme",
   "keywords": [
     "vite",
     "glsl",
@@ -25,7 +25,8 @@
     "README.md",
     "yarn.lock",
     "LICENSE",
-    "src"
+    "*.d.ts",
+    "*.js"
   ],
   "peerDependencies": {
     "vite": "^3.0.0 || ^4.0.0 || ^5.0.0"
