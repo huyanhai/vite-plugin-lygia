@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-lygia",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Local resolution lygia dependencies for glsl",
   "main": "src/index.js",
   "module": "src/index.js",
