@@ -1,5 +1,5 @@
 import { Plugin } from "vite";
-import fs from "fs-extra";
+import { readFileSync } from "fs";
 import { dirname, posix, resolve, sep } from "path";
 import { createFilter } from "@rollup/pluginutils";
 import { cwd } from "process";
@@ -65,7 +65,7 @@ const loadChunks = (source: string, filePath: string) => {
       // Directory corresponding to the current file
       const chunkDirectory = dirname(chunkAbsolutePath);
 
-      return loadChunks(fs.readFileSync(chunkAbsolutePath, "utf-8"), chunkDirectory);
+      return loadChunks(readFileSync(chunkAbsolutePath, "utf-8"), chunkDirectory);
     });
   }
 

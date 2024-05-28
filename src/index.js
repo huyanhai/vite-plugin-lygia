@@ -1,4 +1,4 @@
-import fs from "fs-extra";
+import { readFileSync } from "fs";
 import { dirname, posix, resolve, sep } from "path";
 import { createFilter } from "@rollup/pluginutils";
 import { cwd } from "process";
@@ -47,7 +47,7 @@ const loadChunks = (source, filePath) => {
             let chunkAbsolutePath = resolve(chunkPath.startsWith("lygia") ? libraryPath : unixPath, chunkPath.split(sep).join(posix.sep));
             // Directory corresponding to the current file
             const chunkDirectory = dirname(chunkAbsolutePath);
-            return loadChunks(fs.readFileSync(chunkAbsolutePath, "utf-8"), chunkDirectory);
+            return loadChunks(readFileSync(chunkAbsolutePath, "utf-8"), chunkDirectory);
         });
     }
     return source.trim().replace(/(\r\n|\r|\n){3,}/g, "$1\n");
